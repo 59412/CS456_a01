@@ -1,0 +1,37 @@
+The Assignment is done in C++ programming language, with C++11 standard.
+
+The code is entirely developed on various terminals in student.cs.uwaterloo.ca
+
+In order to run the program, follow these instructions:
+1.unzip the .zip file in any directory
+2.type in command "make", two new executable files "server" and "client" will appear
+3.input "./server.sh <req_code>" in command line on the terminal where you want as a server. Replace <req_code> with any integer that's normal.(not overflowing)
+4.input "./client.sh <server_address> <n_port> <req_code> <msg>" in command line
+  server_address: you should get this address by running "hostname"(if Linux) on your server terminal (or 127.0.0.1 for local terminal)
+  n_port: Once you ran ./server.sh, it will output its n_port number and that is the number you need to connecting to it
+  req_code: Must be same as the one you put on ./server.sh, if not, the request will be declined
+  msg: The string you want to reverse
+After you send the request, the request will appear on server and client will receive the reversed message if no error occurs. Otherwise, check server for error details.
+5.you can repeatively send requests to server as long as it's still open
+
+For coding details, please check all comments
+For intermeidate value verifications, uncomment some of the printf functions. Their meaning are all commented
+
+Questions:
+
+1.Which machines was the code written on?
+The code was written on and tested by using ssh into linux.student.cs.uwaterloo.ca.
+
+2.Compiler?
+g++ compiler used on student.cs.uwaterloo.ca environment
+
+3.Files and Executables?
+
+executables: server <req_code>
+             client <server_address> <n_port> <req_code> <msg>
+files:       server.cpp <req_code>
+             client.cpp <server_address> <n_port> <req_code> <msg>
+             ./server.sh <req_code>
+             ./client.sh <server_address> <n_port> <req_code> <msg>
+             README
+             makefile 
